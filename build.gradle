@@ -8,9 +8,7 @@ apply plugin: 'idea'
 apply plugin: 'groovy'
 
 repositories {
-    mavenRepo urls: "file:///d:/m2/local_repo"
-    mavenRepo urls: ["thirdparty", "apache_incubator", "java.net.maven1",
-            "java.net.maven2", "central", "releases", "snapshots"].collect {name -> "http://s40build:8086/content/repositories/$name"}
+	mavenCentral()
 }
 
 dependencies {
@@ -18,7 +16,7 @@ dependencies {
     compile springDependencies("beans", "core", "context", "test")
     testCompile springDependencies("test")
     testCompile spockDependencies()
-    groovy "org.codehaus.groovy:groovy-all:1.7.5"
+    groovy "org.codehaus.groovy:groovy-all:1.8.3"
 }
 
 group = 'be.freggy.springspock'
