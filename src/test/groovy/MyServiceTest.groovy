@@ -8,17 +8,11 @@ import spock.lang.Specification
  */
 @ContextConfiguration('classpath:test-context.xml')
 class MyServiceTest extends Specification {
+    @SpringMock("customMyInterfaceBeanName")
     def myInterface = Mock(MyInterface)
 
     @Autowired
-    MyInterface myInterfaceDelegate
-
-    @Autowired
     MyService myService
-
-    def setup() {
-        myInterfaceDelegate.delegate = myInterface
-    }
 
     def "testing regular behaviour"() {
         when:

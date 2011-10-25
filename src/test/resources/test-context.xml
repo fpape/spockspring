@@ -4,9 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="delegatingMyService" class="DelegatingMyInterface"/>
-
     <bean id="myService" class="MyService">
-        <property name="myInterface" ref="delegatingMyService"/>
+        <property name="myInterface" ref="customMyInterfaceBeanName"/>
     </bean>
 </beans>
