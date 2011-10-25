@@ -1,0 +1,13 @@
+
+
+/**
+ * Author: 4150
+ * Date: 25/10/11 13:31
+ */
+class MyService {
+    MyInterface myInterface
+
+    int invokeMyMethod() {
+        return myInterface.myMethod()
+    }
+}

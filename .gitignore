@@ -1,0 +1,25 @@
+# Maven
+target
+
+# Gradle
+.gradle
+build
+
+# IDEA
+.idea
+*.iml
+*.ipr
+*.iws
+out
+
+# Eclipse
+.project
+.classpath
+.settings
+bin
+
+# Grails
+stacktrace.log
+
+# Other
+.DS_Store
